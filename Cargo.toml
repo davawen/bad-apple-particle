@@ -1,0 +1,15 @@
+[package]
+name = "bad-apple-particle"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { version = "0.10.0", features = ["bevy_dylib"] }
+rand = "0.8.5"
+
+# Enable max optimizations for dependencies, but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
+
